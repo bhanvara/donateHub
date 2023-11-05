@@ -13,3 +13,35 @@
     background-color: #F7F7F7;
     border-radius: 8px;
 }
+
+.donation-form {
+    background-color: #F7F7F7;
+    border-radius: 8px;
+  }
+
+  .donation-label {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .donation-input {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px;
+    width: 100%;
+  }
+
+  .btn-donate {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .btn-donate:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
