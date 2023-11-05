@@ -5,7 +5,6 @@ import Footer from "./Footer";
 export default function About() {
     return (
         <div>
-            <Header />
             <div>
                 <section className="bg-gray-100 py-12 h-screen">
                     <div className="container mx-auto p-6 about-section">
@@ -34,8 +33,6 @@ export default function About() {
                     </div>
                 </section>
             </div>
-
-            <Footer />
         </div>
     );
 }

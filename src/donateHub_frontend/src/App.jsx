@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Home from "./components/Home";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { donateHub_backend } from "../../declarations/donateHub_backend";
+import Header from "./components/Header";
+import Home from "./components/Home";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div>
+    <Router>
       <Header />
-      <Home />
-      {/* <Contact />
-      <About/> */}
-      <Footer />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer/>
+    </Router>
   );
 }

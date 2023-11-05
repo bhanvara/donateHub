@@ -5,7 +5,6 @@ import Footer from "./Footer";
 export default function Contact() {
     return (
         <div>
-            <Header />
             <div>
                 <section className="bg-gray-800 h-screen flex items-center">
                     <div className="container mx-auto text-center">
@@ -23,12 +22,12 @@ export default function Contact() {
                                 <div className="mb-4">
                                     <label for="name" className="block text-gray-600 text-sm font-medium">Your Name</label>
                                     <input type="text" id="name" name="name"
-                                        className="w-full px-3 py-2 border border-gray-300 focus:ring-green-500 rounded-lg shadow-sm text-sm placeholder-gray-400 focus:outline-none focus:border-green-300"/>
+                                        className="w-full px-3 py-2 border border-gray-300 focus:ring-green-500 rounded-lg shadow-sm text-sm placeholder-gray-400 focus:outline-none focus:border-green-300" />
                                 </div>
                                 <div className="mb-4">
                                     <label for="email" className="block text-gray-600 text-sm font-medium">Your Email</label>
                                     <input type="email" id="email" name="email"
-                                        className="w-full px-3 py-2 border border-gray-300 focus:ring-green-500 rounded-lg shadow-sm text-sm placeholder-gray-400 focus:outline-none focus:border-green-300"/>
+                                        className="w-full px-3 py-2 border border-gray-300 focus:ring-green-500 rounded-lg shadow-sm text-sm placeholder-gray-400 focus:outline-none focus:border-green-300" />
                                 </div>
                                 <div className="mb-4">
                                     <label for="message" className="block text-gray-600 text-sm font-medium">Message</label>
@@ -45,7 +44,6 @@ export default function Contact() {
                     </div>
                 </section>
             </div>
-            <Footer />
         </div>
     );
 }
