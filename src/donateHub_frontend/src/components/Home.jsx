@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
@@ -11,13 +12,16 @@ export default function Home() {
                     <div className="container mx-auto text-center">
                         <h1 className="text-5xl font-extrabold text-white mb-4">Welcome to DonateHub</h1>
                         <p className="text-lg text-white mb-8">Your platform for crowdfunding and fundraising.</p>
-                        <a href="#get-started"
+                        <a href="#featured-compaigns"
                             className="btn btn-primary py-3 px-6 text-lg font-semibold text-white rounded-full bg-green-600 hover:bg-green-700 hover:text-white transition duration-300 transform hover:scale-105">Get
-                            Started</a>
+                            Started
+                        </a>
+
+                        
                     </div>
                 </div>
             </section>
-            <section className="py-12 bg-gray-100">
+            <section id="featured-compaigns" className="py-12 bg-gray-100">
                 <div className="container mx-auto">
                     <h2 className="text-3xl font-semibold text-gray-800 mb-8">Featured Campaigns</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -28,8 +32,15 @@ export default function Home() {
                                 <h3 className="text-lg font-semibold text-gray-800">Help for Children's Education</h3>
                                 <p className="text-sm text-gray-600 mb-2">Fundraising to support education for underprivileged children.</p>
                                 <p className="text-sm text-gray-600 mb-4">Amount Raised: ₹5.00 Lakhs of ₹10.00 Lakhs</p>
-                                <a href="#"
-                                    className="btn btn-primary py-2 px-4 text-sm font-semibold text-white rounded-full bg-green-800 hover:bg-green-700 hover:text-white transition duration-300 transform hover:scale-105">Donate</a>
+                                <Link
+                                    to={{
+                                        pathname: "/donate",
+                                        state: { causeID: "1" }
+                                    }}
+                                    className="btn btn-primary py-2 px-4 text-sm font-semibold text-white rounded-full bg-green-800 hover:bg-green-700 hover:text-white transition duration-300 transform hover:scale-105"
+                                >
+                                    Donate
+                                </Link>
                             </div>
                         </div>
 
@@ -40,8 +51,15 @@ export default function Home() {
                                 <h3 className="text-lg font-semibold text-gray-800">Clean Water for Villages</h3>
                                 <p className="text-sm text-gray-600 mb-2">Support our mission to provide clean water to remote villages.</p>
                                 <p className="text-sm text-gray-600 mb-4">Amount Raised: ₹7.50 Lakhs of ₹12.00 Lakhs</p>
-                                <a href="#"
-                                    className="btn btn-primary py-2 px-4 text-sm font-semibold text-white rounded-full bg-green-800 hover:bg-green-700 hover:text-white transition duration-300 transform hover:scale-105">Donate</a>
+                                <Link
+                                    to={{
+                                        pathname: "/donate",
+                                        state: { causeID: "2" }
+                                    }}
+                                    className="btn btn-primary py-2 px-4 text-sm font-semibold text-white rounded-full bg-green-800 hover:bg-green-700 hover:text-white transition duration-300 transform hover:scale-105"
+                                >
+                                    Donate
+                                </Link>
                             </div>
                         </div>
 
@@ -52,8 +70,15 @@ export default function Home() {
                                 <h3 className="text-lg font-semibold text-gray-800">Empowering Women in Tech</h3>
                                 <p className="text-sm text-gray-600 mb-2">Help women pursue careers in technology and innovation.</p>
                                 <p className="text-sm text-gray-600 mb-4">Amount Raised: ₹4.20 Lakhs of ₹8.00 Lakhs</p>
-                                <a href="#"
-                                    className="btn btn-primary py-2 px-4 text-sm font-semibold text-white rounded-full bg-green-800 hover:bg-green-700 hover:text-white transition duration-300 transform hover:scale-105">Donate</a>
+                                <Link
+                                    to={{
+                                        pathname: "/donate",
+                                        state: { causeID: "3" }
+                                    }}
+                                    className="btn btn-primary py-2 px-4 text-sm font-semibold text-white rounded-full bg-green-800 hover:bg-green-700 hover:text-white transition duration-300 transform hover:scale-105"
+                                >
+                                    Donate
+                                </Link>
                             </div>
                         </div>
 
@@ -64,8 +89,15 @@ export default function Home() {
                                 <h3 className="text-lg font-semibold text-gray-800">Nature Conservation Project</h3>
                                 <p className="text-sm text-gray-600 mb-2">Support a good cause to protect our environment and wildlife.</p>
                                 <p className="text-sm text-gray-600 mb-4">Amount Raised: ₹6.80 Lakhs of ₹15.00 Lakhs</p>
-                                <a href="#"
-                                    className="btn btn-primary py-2 px-4 text-sm font-semibold text-white rounded-full bg-green-800 hover:bg-green-700 hover:text-white transition duration-300 transform hover:scale-105">Donate</a>
+                                <Link
+                                    to={{
+                                        pathname: "/donate",
+                                        state: { causeID: "4" }
+                                    }}
+                                    className="btn btn-primary py-2 px-4 text-sm font-semibold text-white rounded-full bg-green-800 hover:bg-green-700 hover:text-white transition duration-300 transform hover:scale-105"
+                                >
+                                    Donate
+                                </Link>
                             </div>
                         </div>
 
@@ -76,8 +108,15 @@ export default function Home() {
                                 <h3 className="text-lg font-semibold text-gray-800">Food for the Needy</h3>
                                 <p className="text-sm text-gray-600 mb-2">Make a difference today by providing food to the less fortunate.</p>
                                 <p className="text-sm text-gray-600 mb-4">Amount Raised: ₹3.60 Lakhs of ₹6.00 Lakhs</p>
-                                <a href="#"
-                                    className="btn btn-primary py-2 px-4 text-sm font-semibold text-white rounded-full bg-green-800 hover:bg-green-700 hover:text-white transition duration-300 transform hover:scale-105">Donate</a>
+                                <Link
+                                    to={{
+                                        pathname: "/donate",
+                                        state: { causeID: "5" }
+                                    }}
+                                    className="btn btn-primary py-2 px-4 text-sm font-semibold text-white rounded-full bg-green-800 hover:bg-green-700 hover:text-white transition duration-300 transform hover:scale-105"
+                                >
+                                    Donate
+                                </Link>
                             </div>
                         </div>
 
@@ -88,8 +127,15 @@ export default function Home() {
                                 <h3 className="text-lg font-semibold text-gray-800">Renewable Energy Initiatives</h3>
                                 <p className="text-sm text-gray-600 mb-2">Support our initiatives to promote renewable energy sources.</p>
                                 <p className="text-sm text-gray-600 mb-4">Amount Raised: ₹9.50 Lakhs of ₹10.00 Lakhs</p>
-                                <a href="#"
-                                    className="btn btn-primary py-2 px-4 text-sm font-semibold text-white rounded-full bg-green-800 hover:bg-green-700 hover:text-white transition duration-300 transform hover:scale-105">Donate</a>
+                                <Link
+                                    to={{
+                                        pathname: "/donate",
+                                        state: { causeID: "6" }
+                                    }}
+                                    className="btn btn-primary py-2 px-4 text-sm font-semibold text-white rounded-full bg-green-800 hover:bg-green-700 hover:text-white transition duration-300 transform hover:scale-105"
+                                >
+                                    Donate
+                                </Link>
                             </div>
                         </div>
                     </div>

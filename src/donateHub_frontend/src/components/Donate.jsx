@@ -1,6 +1,11 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Donate() {
+    const location = useLocation();
+     const causeID = location.state ? location.state.causeID : null;
+    console.log(location);
+    console.log(causeID);
     return (
         <div>
             <section className="bg-gray-800 h-screen flex items-center">
