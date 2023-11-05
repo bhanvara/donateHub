@@ -1,0 +1,31 @@
+{
+  "canisters": {
+    "donateHub_backend": {
+      "main": "src/donateHub_backend/main.mo",
+      "type": "motoko"
+
+
+    },
+    "donateHub_frontend": {
+      "dependencies": [
+        "donateHub_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/donateHub_frontend/src/index.html"
+      },
+      "source": [
+        "src/donateHub_frontend/assets",
+        "dist/donateHub_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
