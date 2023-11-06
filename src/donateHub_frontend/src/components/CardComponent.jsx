@@ -35,7 +35,7 @@ export const CardComponent = ({ id, image, title, description }) => {
                     <Link
                         to={{
                             pathname: "/donate",
-                            state: { causeID: id }
+                            search: "?cause=" + (Number(id)+1),
                         }}
                         className="btn btn-primary py-2 px-4 text-sm font-semibold text-white rounded-full bg-green-800 hover:bg-green-700 hover:text-white transition duration-300 transform hover:scale-105"
                     >

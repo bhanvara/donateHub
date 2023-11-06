@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-
 import { donateHub_backend } from "../../../declarations/donateHub_backend";
 
 export default function Donate() {
-    // const location = useLocation();
-    //  const causeID = location.state ? location.state.causeID : null;
-    // console.log(location);
-    // console.log(causeID);
-    const causeId_default = 0;
+    const location = useLocation();
+    console.log(location);
+    const searchParams = new URLSearchParams(location.search);
+    const causeId_default=searchParams ? (searchParams.get("cause")-1): 0;
+
     var [selectedCause, setSelectedCause] = React.useState(causeId_default);
     var [donationAmount, setDonationAmount] = React.useState();
 
@@ -29,7 +28,7 @@ export default function Donate() {
                     <h1 className="text-4xl font-extrabold text-white mb-4">Make a Donation</h1>
                     <p className="text-lg text-white mb-8">Your contribution can make a difference.</p>
                     <div className="max-w-md mx-auto p-6 donation-form">
-                        {/* <form>
+                        <form onSubmit={handleDonation}>
                             <div className="mb-4">
                                 <label for="name" className="donation-label text-lg">Your Name</label>
                                 <input type="text" id="name" name="name" className="donation-input" />
@@ -38,28 +37,9 @@ export default function Donate() {
                                 <label for="email" className="donation-label text-lg">Your Email</label>
                                 <input type="email" id="email" name="email" className="donation-input" />
                             </div>
-                            <div className="mb-4 ">
-                                <label for="cause" className="donation-label text-lg">Select a Cause</label>
-                                <select id="cause" name="cause" className="donation-input text-center">
-                                    <option value="education">Help for Children's Education</option>
-                                    <option value="water">Clean Water for Villages</option>
-                                    <option value="tech">Empowering Women in Tech</option>
-                                    <option value="nature">Nature Conservation Project</option>
-                                    <option value="food">Food for the Needy</option>
-                                    <option value="energy">Renewable Energy Initiatives</option>
-                                </select>
-                            </div>
-                            <div className="mb-4">
-                                <label for="amount" className="donation-label text-lg">Donation Amount</label>
-                                <input type="number" id="amount" name="amount" className="donation-input" />
-                            </div>
-                            <button type="submit" className="btn-donate bg-green-800 hover:bg-green-700">Donate</button>
-                        </form> */}
-
-                        <form onSubmit={handleDonation}>
                             <div className="mb-4">
                                 <label for="cause" className="donation-label text-lg">Cause</label>
-                                <select id="cause" name="cause" className="donation-input" value={selectedCause} onChange={(e) => setSelectedCause(e.target.value)}>
+                                <select id="cause" name="cause" className="donation-input text-center" value={selectedCause} onChange={(e) => setSelectedCause(e.target.value)}>
                                     <option value="0">Help for Children's Education</option>
                                     <option value="1">Clean Water for Villages</option>
                                     <option value="2">Empowering Women in Tech</option>
