@@ -35,6 +35,19 @@ actor donateHub {
     return null;
   };
 
+  // public query func getDonations(id : Nat) : async [Info] {
+  //   for (i in Iter.range(0, Array.size(donations) -1)) {
+  //     let donation = donations[i];
+  //     if (donation.id == id) {
+  //       Debug.print("Donation ID: " # Nat.toText(donation.id));
+  //       Debug.print("Raised Amount: " # Float.toText(donation.raisedAmount));
+  //       Debug.print("Goal Amount: " # Float.toText(donation.goalAmount));
+  //       return ?donation;
+  //     };
+  //   };
+  //   return null;
+  // };
+
   public func topUpDonation(id : Nat, amountToAdd : Float) : () {
     var updatedDonations : [Info] = [];
 

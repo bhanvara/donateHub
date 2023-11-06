@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Donate from "./components/Donate";
+import Check from "./components/Check";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer/>
+      {/* <Check/> */}
     </Router>
   );
 }
