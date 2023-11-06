@@ -45,7 +45,7 @@ export default function Donate() {
 
     return (
         <div>
-            <section className="bg-gray-800 h-screen flex items-center">
+            <section className="bg-gray-900 h-screen flex items-center">
                 <div className="container mx-auto text-center">
                     <h1 className="text-4xl font-extrabold text-white mb-4">Make a Donation</h1>
                     <p className="text-lg text-white mb-8">Your contribution can make a difference.</p>
@@ -89,7 +89,7 @@ export default function Donate() {
                 className="fixed inset-0 flex items-center justify-center z-50"
                 overlayClassName="fixed inset-0 bg-opacity-70 bg-black"
             >
-                <div className="bg-white p-6 rounded-lg w-64">
+                <div className="bg-gray-200 p-6 rounded-lg w-64">
                     <div className="text-center">
                         <h2 className="text-2xl font-semibold mb-4">Thank you for your donation!</h2>
                         <p className="text-lg mb-2">You have donated: ₹{donatedAmount}</p>
