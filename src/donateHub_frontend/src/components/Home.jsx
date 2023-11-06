@@ -20,9 +20,9 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section id="featured-compaigns" className="py-12 bg-gray-100">
+            <section id="featured-compaigns" className="py-12 bg-gray-900">
                 <div className="container mx-auto">
-                    <h2 className="text-3xl font-semibold text-gray-800 mb-8">Featured Campaigns</h2>
+                    <h2 className="text-3xl font-semibold text-white mb-8">Featured Campaigns</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                         {/* <!-- Campaign Card 1 --> */}
                         
@@ -30,7 +30,7 @@ export default function Home() {
 
                         {/* <!-- Campaign Card 2 --> */}
 
-                        <CardComponent id="1" image="https://images.unsplash.com/photo-1546531130-0f36255d9d49" title="Clean Water for Villages" description="Support our mission to provide clean water to remote villages."/>
+                        <CardComponent id="1" image="https://plus.unsplash.com/premium_photo-1661673839379-af15f57c1ab3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHdhdGVyJTIwc3VwcGx5fGVufDB8fDB8fHww" title="Clean Water for Villages" description="Support our mission to provide clean water to remote villages."/>
 
                         {/* <!-- Campaign Card 3 --> */}
 
@@ -42,7 +42,7 @@ export default function Home() {
 
                         {/* <!-- Campaign Card 5 --> */}
                         
-                        <CardComponent id="4" image="https://images.unsplash.com/photo-1507427100689-2bf8574e32d4" title="Food for the Needy" description="Make a difference today by providing food to the less fortunate."/>
+                        <CardComponent id="4" image="https://images.unsplash.com/photo-1582307811683-75b18a39ab71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" title="Food for the Needy" description="Make a difference today by providing food to the less fortunate."/>
 
                         {/* <!-- Campaign Card 6 --> */}
                         
