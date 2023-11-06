@@ -7,12 +7,11 @@ Modal.setAppElement('#root'); // Set the root element for accessibility
 
 export default function Donate() {
     const location = useLocation();
-    console.log(location);
     const searchParams = new URLSearchParams(location.search);
-    console.log(searchParams);
-    const causeIdDefault = 0;
-    if (searchParams.length > 0) {
-        causeIdDefault = searchParams.get("cause") - 1;
+    var causeIdDefault = 0;
+
+    if (searchParams.size > 0) {
+        causeIdDefault = Number(searchParams.get("cause")) - 1;
     }
 
     const [selectedCause, setSelectedCause] = React.useState(causeIdDefault);
