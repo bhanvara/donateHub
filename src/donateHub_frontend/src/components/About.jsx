@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function About() {
   return (
     <div className="bg-gray-900 h-screen">
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+      <div className="relative px-6 pt-14 lg:px-8"> {/*isolate removed */}
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -20,11 +20,7 @@ export default function About() {
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-24">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-100 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              Your platform for crowdfunding and fundraising.{" "}
-              <a href="#" className="font-semibold text-indigo-600">
-                <span className="absolute inset-0" aria-hidden="true"></span>Read
-                more <span aria-hidden="true">&rarr;</span>
-              </a>
+              Your platform for crowdfunding and fundraising.
             </div>
           </div>
           <div className="text-center">
@@ -45,7 +41,7 @@ export default function About() {
               >
                 Get started
               </Link>
-              <Link to="/home" className="text-sm font-semibold leading-6 text-white">
+              <Link to="/" className="text-sm font-semibold leading-6 text-white">
                 Learn more <span aria-hidden="true">→</span>
               </Link>
             </div>

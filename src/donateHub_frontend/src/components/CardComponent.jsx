@@ -42,7 +42,7 @@ export const CardComponent = ({ id, image, title, description }) => {
             )}{" "}
             Lakhs of ₹{(donation[0]?.goalAmount / 100000).toFixed(2)} Lakhs{" "}
           </span>
-          <button className="bg-green-500 text-white py-2 px-4 rounded-full font-bold hover:bg-green-600">
+          <button className="bg-green-700 text-white py-2 px-4 rounded-full font-bold hover:bg-green-800">
             <Link
               to={{
                 pathname: "/donate",
