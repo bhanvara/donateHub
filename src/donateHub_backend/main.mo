@@ -13,13 +13,13 @@ actor donateHub {
     goalAmount : Float;
   };
 
-  stable var donations : [Info] = [
-    { id = 0; raisedAmount = 22.0; goalAmount = 55.0 },
-    { id = 1; raisedAmount = 15.0; goalAmount = 36.0 },
-    { id = 2; raisedAmount = 18.0; goalAmount = 25.0 },
-    { id = 3; raisedAmount = 30.0; goalAmount = 40.0 },
-    { id = 4; raisedAmount = 43.0; goalAmount = 70.0 },
-    { id = 5; raisedAmount = 26.0; goalAmount = 30.0 },
+  var donations : [Info] = [
+    { id = 0; raisedAmount = 2200000.0; goalAmount = 5500000.0 },
+    { id = 1; raisedAmount = 1500000.0; goalAmount = 3600000.0 },
+    { id = 2; raisedAmount = 1800000.0; goalAmount = 2500000.0 },
+    { id = 3; raisedAmount = 3000000.0; goalAmount = 4000000.0 },
+    { id = 4; raisedAmount = 4300000.0; goalAmount = 7000000.0 },
+    { id = 5; raisedAmount = 2600000.0; goalAmount = 3000000.0 },
   ];
 
   public query func getDonationById(id : Nat) : async ?Info {
@@ -48,7 +48,7 @@ actor donateHub {
   //   return null;
   // };
 
-  public func topUpDonation(id : Nat, amountToAdd : Float) : () {
+  public func topUpDonation(id : Nat, amountToAdd : Float) : async Nat {
     var updatedDonations : [Info] = [];
 
     for (i in Iter.range(0, Array.size(donations) -1)) {
@@ -66,6 +66,7 @@ actor donateHub {
     };
 
     donations := updatedDonations;
+    return 1;
   };
 
 };

@@ -31,7 +31,7 @@ export const CardComponent = ({ id, image, title, description }) => {
                     {async () => {
                         console.log("callback function")
                     }}
-                    <p className="text-sm text-gray-600 mb-4"> Amount Raised: ₹{donation[0]?.raisedAmount} Lakhs of ₹{donation[0]?.goalAmount} Lakhs </p>
+                    <p className="text-sm text-gray-600 mb-4"> Amount Raised: ₹{(donation[0]?.raisedAmount/100000).toFixed(2)} Lakhs of ₹{(donation[0]?.goalAmount/100000).toFixed(2)} Lakhs </p>
                     <Link
                         to={{
                             pathname: "/donate",
