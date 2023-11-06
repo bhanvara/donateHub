@@ -6,8 +6,12 @@ export default function Donate() {
     const location = useLocation();
     console.log(location);
     const searchParams = new URLSearchParams(location.search);
-    const causeId_default=searchParams ? (searchParams.get("cause")-1): 0;
-
+    console.log(searchParams);
+    const causeId_default=0;
+    if(searchParams.length>0){
+        causeId_default=searchParams.get("cause")-1;
+    }
+  
     var [selectedCause, setSelectedCause] = React.useState(causeId_default);
     var [donationAmount, setDonationAmount] = React.useState();
 
@@ -18,7 +22,7 @@ export default function Donate() {
         event.preventDefault();
         const causeId = Number(selectedCause);
         const amount = parseFloat(donationAmount);
-        await donateHub_backend.topUpDonation(causeId, donationAmount);
+        // await donateHub_backend.topUpDonation(causeId, donationAmount);
     };
 
     return (
