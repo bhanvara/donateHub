@@ -7,11 +7,13 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Donate from "./components/Donate";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
     <Router>
-      <Header />
+      {/* <Header /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Donate" element={<Donate />} />
