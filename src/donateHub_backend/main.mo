@@ -14,7 +14,7 @@ actor donateHub {
   };
 
   var donations : [Info] = [
-    { id = 0; raisedAmount = 2200000.0; goalAmount = 5500000.0 },
+    { id = 0; raisedAmount = 1600000.0; goalAmount = 5500000.0 },
     { id = 1; raisedAmount = 1500000.0; goalAmount = 3600000.0 },
     { id = 2; raisedAmount = 1800000.0; goalAmount = 2500000.0 },
     { id = 3; raisedAmount = 3000000.0; goalAmount = 4000000.0 },
