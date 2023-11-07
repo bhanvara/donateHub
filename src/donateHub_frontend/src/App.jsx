@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { donateHub_backend } from "../../declarations/donateHub_backend";
-import Header from "./components/Header";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import About from "./components/About";
@@ -12,7 +11,6 @@ import Navbar from "./components/Navbar";
 export default function App() {
   return (
     <Router>
-      {/* <Header /> */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -6,9 +6,9 @@ export default function About() {
     <div className="bg-gray-900 h-screen flex items-center justify-center">
       <div className="container mx-auto px-6 py-4">
         <div className="max-w-2xl mx-auto text-center py-16">
-          <h2 className="text-2xl font-bold text-white mb-8">
-            Your platform for crowdfunding and fundraising.
-          </h2>
+        <div className="rounded-full mb-6 px-3 py-1 text-sm leading-6 text-gray-100">
+              Your platform for crowdfunding and fundraising.
+            </div>
           <h1 className="text-5xl font-bold text-white sm:text-6xl">
             Decentralized for a better tomorrow
           </h1>
