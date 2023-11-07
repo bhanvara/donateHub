@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Remove default margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%;
+}
+
 .hero-text {
     background-color: rgba(0, 0, 0, 0.7);
     color: #ffffff;
