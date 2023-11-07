@@ -28,15 +28,18 @@ export default function Donate() {
         const amount = parseFloat(donationAmount);
         setDonatedAmount(donationAmount);
         setProcessingDonation(true);
-
-        try {
-            await donateHub_backend.topUpDonation(causeId, amount);
-            const donation = await donateHub_backend.getDonationById(causeId);
-            setRaisedAmount(donation[0]?.raisedAmount);
-            setGoalAmount(donation[0]?.goalAmount);
-            setConfirmation(true);
-        } catch (error) {
-            alert("Donation failed!");
+        if (donationAmount) {
+            try {
+                await donateHub_backend.topUpDonation(causeId, amount);
+                const donation = await donateHub_backend.getDonationById(causeId);
+                setRaisedAmount(donation[0]?.raisedAmount);
+                setGoalAmount(donation[0]?.goalAmount);
+                setConfirmation(true);
+            } catch (error) {
+                alert("Donation failed!");
+            }
+        } else{
+            alert("Enter a donation amount to continue!");
         }
 
         setProcessingDonation(false);
