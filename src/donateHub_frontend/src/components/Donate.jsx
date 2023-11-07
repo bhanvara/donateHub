@@ -49,7 +49,7 @@ export default function Donate() {
     return (
         <div>
             <section className="bg-gray-900 h-screen flex items-center">
-                <div className="container mx-auto text-center">
+                <div className="container mx-5 sm:mx-auto text-center">
                     <h1 className="text-4xl font-extrabold text-white mb-4">Make a Donation</h1>
                     <p className="text-lg text-white mb-8">Your contribution can make a difference.</p>
                     <div className="max-w-md mx-auto p-6 donation-form">

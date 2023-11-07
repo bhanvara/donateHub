@@ -23,7 +23,7 @@ export const CardComponent = ({ id, image, title, description }) => {
 
   return (
 
-      <div className=" bg-gray-200 rounded-lg shadow-lg p-8 md:m-5 m-2">
+      <div className=" bg-gray-200 rounded-lg shadow-lg p-8 md:m-5 mx-5">
         <div className="relative overflow-hidden">
           <img
             className="object-cover w-full h-full"
